@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students list</title>
+</head>
+<body>
+    <span style='font-size:80px;'class="arrow" onclick="history.back()">&#8592; </span>
+    <h2>Students List</h2>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th (click)="sort('name')" class="column">Name&nbsp;<i class="fa fa-sort"></i></th> 
+                    <th (click)="sort('surname')" class="column">Surname&nbsp;<i class="fa fa-sort"></i></th> 
+                    <th (click)="sort('address')" class="column">Address&nbsp;<i class="fa fa-sort"></i></th> 
+                    <th (click)="sort('phone')" class="column">Phone&nbsp;<i class="fa fa-sort"></i></th> 
+                    <th (click)="sort('email')" class="column">Email&nbsp;<i class="fa fa-sort"></i></th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users | orderBy: key: reverse">
+                    <td>{{user.name}}</td>
+                    <td>{{user.surname}}</td>
+                    <td>{{user.address}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.email}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title>Logbook</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <header>
+          <img src="assets/logo.svg" alt="logo" class="logo">
+        </header>
+      </div>
+    </div>        
+    <form [formGroup]="LoginForm" (submit)="checkUser()">
+      <div class="center">        
+        <div class="sign-in-form">
+          <i class="fa fa-user-circle-o" style="font-size:36px" ></i>        
+          <h1>Sign in</h1>
+          <input name="email" 
+                  id="email" 
+                  type="text" 
+                  formControlName="email" 
+                  class="input-box" 
+                  placeholder="Email">               
+          <br>
+          <span id="error1"></span>
+          <input name="password"
+                 [type]="showPassword ? 'text' : 'password'"
+                 class="input-box"
+                 id="password-field" 
+                 placeholder="Password"
+                 formControlName="password">
+          <div>
+            <i alt="show" 
+               class="fa fa-eye eye-show"
+               (click)="showPassword = !showPassword"
+               [class.hide]="showPassword"
+               style="margin-left: 110px; margin-top: -36px; position:absolute; cursor: pointer;"></i>
+            <i alt="hide"
+               class="fa fa-eye-slash eye-hide"
+               (click)="showPassword = !showPassword"
+               [class.hide]="!showPassword"
+               style="margin-left: 110px; margin-top: -36px; position:absolute; cursor: pointer;"></i>         
+          </div>         
+          <span id="error2"></span>
+          <br>
+          <span id="error3"></span>               
+          <p><input type="checkbox" 
+                    formControlName="checkbox"/> I agree to the <a href="#" routerLink="/termsandconditions" >terms and conditions</a></p> 
+            <div class="re" style="color: red;  font-size: 10px; ;padding-top: 0.2rem" *ngIf="LoginForm.hasError('required', 'checkbox')">
+              *Required
+            </div>
+           <br>
+          <button type="submit"  
+                  [disabled]="LoginForm.invalid" 
+                  class= "signin-btn">Sign In</button>
+          <br>
+          <a href="#" routerLink="/forgotpassword" >Forgot Password?</a>      
+        </div>
+      
+        </div>             
+    <div class="footer">
+      <footer>
+        <p style="font-size: 13px;"> © 2021 Copyright Logbook. All rights reserved.</p>
+      </footer> 
+    </div>   
+  
+         
+                
+             

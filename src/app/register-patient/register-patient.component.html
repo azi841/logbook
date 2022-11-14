@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="utf-8">
+    <title>Logbook</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <span style='font-size:80px;'class="arrow" onclick="history.back()">&#8592; </span>
+        <img src="assets/logo.svg" alt="logo" class="logo">
+      </div>
+    </div>        
+    <form [formGroup]="registerPatientForm" (submit)="registerPatient()">
+      <div class="center">        
+        <div class="sign-in-form">
+          <i class="fa fa-user-circle-o" style="font-size:36px" ></i>
+          <br><br>        
+          <h1>Add new patient</h1>
+          <input name="name" 
+                  id="name" 
+                  type="text" 
+                  formControlName="name"
+                  class="input-box" 
+                  placeholder="Name">
+          <p id="error1"></p>   
+          <input name="surname" 
+                  id="surname" 
+                  type="text" 
+                  formControlName="surname"
+                  class="input-box" 
+                  placeholder="Surname">
+          <p id="error2"></p>   
+          <input name="address" 
+                  id="address" 
+                  type="text" 
+                  formControlName="address" 
+                  class="input-box" 
+                  placeholder="Address">
+          <p id="error3"></p>               
+          <input name="phone" 
+                  id="phone" 
+                  type="text" 
+                  formControlName="phone" 
+                  class="input-box" 
+                  placeholder="Phone">
+          <p id="error4"></p>                  
+          <input name="diagnosis" 
+                  id="diagnosis" 
+                  type="text" 
+                  formControlName="diagnosis" 
+                  class="input-box" 
+                  placeholder="Diagnosis">        
+          <p id="error5"></p>   
+          <br>
+          <p><input 
+                  name="isDiabetic" 
+                  id="isDiabetic" 
+                  type="checkbox" 
+                  class="check-box" 
+                  formControlName="isDiabetic"/> Check if patient is diabetic</p>
+          <p id="error6"></p>
+                         
+                         
+
+          <button type="submit"
+                
+                class= "signin-btn">Register new patient</button>
+          <br>
+        </div>
+      </div>
+    </form>                 
+    <div class="footer">
+      <footer>
+        <p style="font-size: 13px;"> © 2021 Copyright Logbook. All rights reserved.</p>
+      </footer> 
+    </div>      
+  </body>
+</html>          

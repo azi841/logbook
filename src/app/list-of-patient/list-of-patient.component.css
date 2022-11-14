@@ -1,0 +1,80 @@
+html,
+body {
+	height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	display: flex;
+    min-height: 100%;
+    min-width: 1024px;
+    flex-direction: column;
+    font-family: Arial;
+    background-image: url("https://c.neh.tw/thumb/f/720/5117137580457984.jpg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.container {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 900px;
+    height: 100px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    position: relative;
+    margin-top: 150px;
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: rgb(46, 45, 45);
+}
+
+.column {
+    color: white;
+}
+
+th {
+	text-align: left;
+}
+
+thead th {
+	
+		background-color: #505050;
+	
+}
+
+.arrow 
+{
+    color: rgb(73, 72, 72);
+    cursor: pointer;
+    margin-left: 30px; 
+}
+
+.arrow:hover
+{
+    border-radius: 15px;
+    color:rgb(122, 122, 122);
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+}

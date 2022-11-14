@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patients list</title>
+</head>
+<body>
+    <span style='font-size:80px;'class="arrow" onclick="history.back()">&#8592; </span>
+    <h2>Patient list</h2>
+    <div class="container">
+        <form>
+            <div class="form-group">
+              <input type="text" name="searchText" placeholder="Search" [(ngModel)]="searchText">
+            </div>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                <form>
+                    <div class="form-group">
+                      <input type="text" name="searchText" placeholder="Search" [(ngModel)]="searchText">
+                    </div>
+                </form>
+                </tr>
+                <tr>
+                  <th (click)="sort('name')" class="column">Name&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('surname')" class="column">Surname&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('address')" class="column">Address&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('phone')" class="column">Phone&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('diagnosis')" class="column">Diagnosis&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('diabetic')" class="column"> Diabetic&nbsp;<i class="fa fa-sort"></i></th> 
+                   <th (click)="sort('diagnosis by')" class="column">Diagnosis by&nbsp;<i class="fa fa-sort"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <tr *ngFor="let user of users | orderBy: key: reverse | filter:searchText index as i">
+                        <td>{{user.name}}</td>
+                        <td>{{user.surname}}</td>
+                        <td>{{user.address}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.diagnosis}}</td>
+                        <td>
+                            <p *ngIf="user.isDiabetic == true">Yes</p>
+                            <p *ngIf="user.isDiabetic == false">No</p>
+                        </td>
+                        <td>{{user.studentName}}</td>     
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

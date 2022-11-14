@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div>
+    <header>
+      <nav>
+        <div class="test1">
+          <div class="dropdown">
+            <button class="dropbtn">
+              <div class= menu></div>
+              <div class= menu></div>
+              <div class= menu></div>
+            </button>
+            <div class="dropdown-content">
+              <a routerLink="/registration"
+              >Add New User</a>
+              <a routerLink="/student-list">List of students</a>
+              <a routerLink="/professor-list">List of professors</a>
+             
+            </div>
+          </div> 
+          <img src="assets/logo.svg" alt="logo" class="logo" routerLink="/admin-dashboard">
+          <div class= nav-items>
+            <a href="#home" routerLink="/admin-dashboard">Home</a>
+            <a href="#about" routerLink="/about-section">About</a>
+          </div>
+        </div>
+        
+        <div class="logout">
+          <button class="logout-button" > 
+            <a href="#" routerLink="/admin-dashboard"><i class="fa fa-user-circle-o" style="font-size:36px" ></i></a>
+          </button> 
+          <div class="logout-item">
+            <a href="#" routerLink="/admin-profile">Profile</a>
+            <a href="#" routerLink="/homepage">Log out</a>
+          </div>
+        </div> 
+      </nav>
+    </header>
+    <footer>
+      <p style="font-size: 13px;">© 2021 Copyright Logbook. All rights reserved.</p>
+    </footer>
+  </div>
+</body> 
+</html>
+
+          
+                
+           
+                
+             

@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.7",
+    "bcryptjs": "*",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "*",
+    "mongoose": "^6.0.9",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0"
+  }
+}

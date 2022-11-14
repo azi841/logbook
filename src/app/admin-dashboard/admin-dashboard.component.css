@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  min-width: 1024px;
+  flex-direction: column;
+  font-family: Arial;
+  background-image: url("https://c.neh.tw/thumb/f/720/5117137580457984.jpg");
+  background-size: cover ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #505050;
+  color: whitesmoke;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+nav {
+  overflow: hidden;
+  background-color: #505050;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  z-index: 1;
+  align-items: center;
+}
+
+nav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 19px;
+  text-decoration: none;
+}
+
+.nav-items {
+  font-size: 40px;
+  margin-left: 90px;
+  margin-top: 5%;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+  
+}
+.menu {
+  width: 35px;
+  height: 5px;
+  background-color:white;
+  margin: 6px 0;
+}
+
+nav a:hover, .dropdown:hover, menu:hover, .dropbtn:hover, .dropdown-content:hover, .nav-items:hover {
+  color: crimson;
+  border-radius: 15px;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #505050;
+  color: whitesmoke;
+}
+
+img {
+  width: 140px;
+  padding: 0px 20px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
+
+/*Log out */
+
+.logout-button {
+  background-color: #505050;
+  color: white;
+  border: none;
+}
+
+.logout-item {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.logout-item a {
+ color:black;
+  padding: 12px 16px;
+  display: block;
+}
+
+.logout-item a:hover {background-color: #ddd;}
+
+.logout:hover .logout-item {display: block;}
+
+/*responsive design */
+@media screen and (max-width: 375px) {
+  nav{
+    height: 100px;
+  }
+  .nav-items{
+    margin-bottom: 70px;
+  }
+  .logo{
+    position: center;
+    margin-top: 25px;
+  }
+  }
+
+
